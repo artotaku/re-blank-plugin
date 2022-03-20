@@ -76,3 +76,7 @@ _G.drawCustomDisplay: jbox_display.draw = (...) => {
 ...
 
 ```
+
+Acknowledgements
+----------------
+https://github.com/ypujante did an amazing job providing RE developers with https://github.com/pongasoft/re-cmake.
