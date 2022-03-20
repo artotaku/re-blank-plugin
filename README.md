@@ -11,6 +11,8 @@ This project showcases a TypeScript file (`display.ts`) that is transpiled to `d
 
 The TypeScript code uses the types declarations for Custom Display API available from https://www.npmjs.com/package/jbox-lua-types to handle drawing and gestures on the custom display.
 
+The project is based on Rack Extension SDK 4.3.0 and Reason Recon 12.
+
 Requirements
 ------------
 - See https://github.com/pongasoft/re-blank-plugin#requirements
@@ -46,6 +48,8 @@ The TypeScript code is available in `src/ts/display.ts`. As you can see the regi
 The callback handler function names match the configurations for the custom display in `GUI2D/hdgui_2D.lua`.
 
 Custom display API functions `jbox.*` and `jbox_display.*` are available as expected but extended by typing for parameters.
+
+If you click on the custom display you will see log output in Reason Recon.
 
 The tstl transpiler transpiles one or more TypeScript files to one lua output file. We use the bundle configuration of tstl here since the Rack Extension SDK expects just one single LUA file that must be named `display.lua`.
 
