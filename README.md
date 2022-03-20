@@ -62,6 +62,8 @@ If you have no other module imports in `display.ts` you don´t need to declare t
 
 If you want to import other modules you have to redeclare `_G` and assign the format version and callback handler functions to `_G`.
 ```
+import { someModule } from "./some-module";
+
 declare let _G: any;
 
 _G.format_version = '1.0';
