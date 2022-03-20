@@ -36,9 +36,11 @@ This will install all required node modules to run TypeScriptToLua.
 > cd re-blank-plugin
 > npm i
 ```
-### Step 4 - Regenerate `display.lua` from `display.ts`
+### Step 4 - Regenerate `display.lua` from `display.ts` and install
 ```
 > npm run build
+> cd build
+> re local45
 ```
 
 How does it work?
