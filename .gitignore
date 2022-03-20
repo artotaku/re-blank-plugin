@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+.history
+build
+cmake-build-debug
+__pycache__
+node_modules
+

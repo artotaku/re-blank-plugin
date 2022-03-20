@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"lib": [
+			"esnext"
+		],
+		"moduleResolution": "Node",
+		"strict": true,
+		"rootDirs": [
+			"./"
+		],
+		"strictNullChecks": false,
+		"experimentalDecorators": true,
+		"types": [
+			"lua-types/5.1",
+			"jbox-lua-types/jbox",
+			"jbox-lua-types/jbox_display"
+		]
+	},
+	"tstl": {
+		"luaTarget": "5.1",
+		"luaLibImport": "require",
+		"luaBundle": "./display.lua",
+		"luaBundleEntry": "./src/ts/display.ts"
+	},
+}
