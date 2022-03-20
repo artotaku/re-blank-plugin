@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pongasoft/re-blank-plugin.git"
+    "url": "git+https://github.com/artotaku/re-blank-plugin.git"
   },
   "author": "artotaku",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pongasoft/re-blank-plugin/issues"
+    "url": "https://github.com/artotaku/re-blank-plugin/issues"
   },
-  "homepage": "https://github.com/pongasoft/re-blank-plugin#readme",
+  "homepage": "https://github.com/artotaku/re-blank-plugin#readme",
   "devDependencies": {
     "lua-types": "^2.11.0",
     "jbox-lua-types": "0.0.2",
