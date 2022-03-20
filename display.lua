@@ -28,7 +28,7 @@ drawCustomDisplay = function(property_values, display_info, dirty_rect)
     jbox_display.draw_rect({top = 2, left = 2, bottom = 20, right = 30}, {r = 255, g = 100, b = 50})
 end
 gestureCustomDisplay = function(property_values, display_info, gesture_start_point)
-    return {handlers = {on_tap = "onTapLowLevelApiDisplay", on_update = "onUpdateLowLevelApiDisplay", on_release = "onReleaseLowLevelApiDisplay", on_cancel = "onCancelLowLevelApiDisplay"}}
+    return {handlers = {on_tap = "onTapCustomDisplay", on_update = "onUpdateCustomDisplay", on_release = "onReleaseCustomDisplay", on_cancel = "onCancelCustomDisplay"}}
 end
 invalidateCustomDisplay = function(property_values, last_property_values, display_info)
     if display_info then

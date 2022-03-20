@@ -14,10 +14,10 @@ const gestureCustomDisplay: jbox_display.recognize_gesture = (
 	gesture_start_point: jbox_display.Point) => {
 	return {
 		handlers: {
-			on_tap: 'onTapLowLevelApiDisplay',
-			on_update: 'onUpdateLowLevelApiDisplay',
-			on_release: 'onReleaseLowLevelApiDisplay',
-			on_cancel: 'onCancelLowLevelApiDisplay'
+			on_tap: 'onTapCustomDisplay',
+			on_update: 'onUpdateCustomDisplay',
+			on_release: 'onReleaseCustomDisplay',
+			on_cancel: 'onCancelCustomDisplay'
 		}
 	};
 };
