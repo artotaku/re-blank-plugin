@@ -46,6 +46,8 @@ This will install all required node modules to run TypeScriptToLua.
 > re local45
 ```
 
+<img src="re-blank-plugin-screenshot.png?raw=true" alt="RE Blank Plugin"/>
+
 How does it work?
 -----------------
 The TypeScript code is available in `src/ts/display.ts`. As you can see the registration of any callback handlers for drawing and gestures works just like in the LUA side in display.lua.
