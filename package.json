@@ -6,6 +6,7 @@
     "build": "tstl && npm run strip-bom",
     "dev": "tstl --watch",
     "tsc": "tsc --build",
+    "re:local45": ".\\build\\re local45",
     "strip-bom": "replace-in-file /%s ﻿/g %s display.lua --isRegex"
   },
   "repository": {
@@ -20,7 +21,7 @@
   "homepage": "https://github.com/artotaku/re-blank-plugin#readme",
   "devDependencies": {
     "lua-types": "^2.11.0",
-    "jbox-lua-types": "^0.0.3",
+    "jbox-lua-types": "^0.0.4",
     "replace-in-file": "^6.3.2",
     "typescript": "~4.6.0",
     "typescript-to-lua": "^1.4.0"

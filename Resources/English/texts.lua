@@ -21,4 +21,5 @@ texts = {
 	["audio out main left"] = "Audio Output Left",
 	["audio out main right"] = "Audio Output Right",
 	["customDisplayProperty"] = "customDisplayProperty",
+	["gesture_ui_name_CustomDisplay"] = "Gesture UI Name CustomDisplay",
 }
