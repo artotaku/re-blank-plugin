@@ -35,13 +35,27 @@ front = jbox.panel {
 
 front.widgets[#front.widgets + 1] = jbox.custom_display{
 	graphics = {
-		node = "CustomDisplay"
+		node = "CustomDisplay1"
 	},
-	display_width_pixels = 100,
+	display_width_pixels = 40,
 	display_height_pixels = 20,
-	draw_function = "drawCustomDisplay",
-	gesture_function = "gestureCustomDisplay",
-	invalidate_function = "invalidateCustomDisplay",
+	draw_function = "drawCustomDisplay1",
+	gesture_function = "gestureCustomDisplay1",
+	invalidate_function = "invalidateCustomDisplay1",
+	values = {
+		"/custom_properties/customDisplayProperty"
+	}
+}
+
+front.widgets[#front.widgets + 1] = jbox.custom_display{
+	graphics = {
+		node = "CustomDisplay2"
+	},
+	display_width_pixels = 40,
+	display_height_pixels = 20,
+	draw_function = "drawCustomDisplay2",
+	gesture_function = "gestureCustomDisplay2",
+	invalidate_function = "invalidateCustomDisplay2",
 	values = {
 		"/custom_properties/customDisplayProperty"
 	}

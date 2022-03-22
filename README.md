@@ -10,7 +10,7 @@ Custom Displays (https://developer.reasonstudios.com/documentation/rack-extensio
 
 TypeScriptToLua (tstl) is node module that allows to write TypeScript code that is transpiled into LUA code.
 
-This project showcases a TypeScript file (`display.ts`) that is transpiled to `display.lua` and then installed in a Rack Extension which can be tested using the Reason Recon developer version.
+This project showcases TypeScript files starting from `display.ts` (and following the imports) that are transpiled to `display.lua` and then installed in a Rack Extension which can be tested using the Reason Recon developer version.
 
 The TypeScript code uses the types declarations for Custom Display API available from https://www.npmjs.com/package/jbox-lua-types to handle drawing and gestures on the custom display.
 
@@ -68,6 +68,9 @@ Caveats
 If you have no other module imports in `display.ts` you don´t need to declare the global scope (`_G` in LUA). This is how it is currently done in display.ts.
 
 If you want to import other modules you have to redeclare `_G` and assign the format version and callback handler functions to `_G`.
+
+The current version of the show case is using the latter approach.
+
 ```
 import { someModule } from "./some-module";
 

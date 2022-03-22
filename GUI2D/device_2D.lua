@@ -31,8 +31,17 @@ front = {
 front[#front + 1] = {
   offset = {40 * 5, 40 * 5},
   {
-    CustomDisplay = {
-      {size = {100 * 5, 20 * 5}}
+    CustomDisplay1 = {
+      {size = {40 * 5, 20 * 5}}
+    }
+  }
+}
+
+front[#front + 1] = {
+  offset = {90 * 5, 40 * 5},
+  {
+    CustomDisplay2 = {
+      {size = {40 * 5, 20 * 5}}
     }
   }
 }
