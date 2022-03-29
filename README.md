@@ -61,7 +61,10 @@ If you click on the custom display you will see log output in Reason Recon.
 The tstl transpiler transpiles one or more TypeScript files to one lua output file. We use the bundle configuration of tstl here since the Rack Extension SDK expects just one single LUA file that must be named `display.lua`.
 
 The transpiler also adds the equivalents of TypeScript language functions such like string and table, etc operations to the LUA output file. This will increase the file size noticeably.
-Unfortunately, up to now there is no tree shaking of unused functions. 
+Unfortunately, up to now there is no tree shaking of unused functions.
+
+To be able to share custom display implementations as components via npm I suggest an interface where the callback functions are declared which serves as contract between custom display providers and consumers. Providers can create classes that implement the interface. Consumers can import these classes and create instances.
+Have a look at `src/ts/custom-display.ts` for such an example. 
 
 Caveats
 -------

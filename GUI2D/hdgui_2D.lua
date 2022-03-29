@@ -13,139 +13,152 @@
 -- the License.
 --
 -- @author Yan Pujante
-
 format_version = "2.0"
 
 --------------------------------------------------------------------------
 -- Front
 --------------------------------------------------------------------------
-front = jbox.panel {
-  graphics = {
-    node = "Bg",
-  },
-  widgets = {
-    -- device name / tape
-    jbox.device_name {
-      graphics = {
-        node = "TapeFront",
-      },
+front = jbox.panel{
+    graphics = {
+        node = "Bg",
     },
-  }
+    widgets = {
+        -- device name / tape
+        jbox.device_name{
+            graphics = {
+                node = "TapeFront",
+            },
+        },
+    }
 }
 
 front.widgets[#front.widgets + 1] = jbox.custom_display{
-	graphics = {
-		node = "CustomDisplay1"
-	},
-	display_width_pixels = 40,
-	display_height_pixels = 20,
-	draw_function = "drawCustomDisplay1",
-	gesture_function = "gestureCustomDisplay1",
-	invalidate_function = "invalidateCustomDisplay1",
-	values = {
-		"/custom_properties/customDisplayProperty"
-	}
+    graphics = {
+        node = "CustomDisplayClassExampleInstance1"
+    },
+    display_width_pixels = 40,
+    display_height_pixels = 20,
+    draw_function = "drawCustomDisplayClassExampleInstance1",
+    gesture_function = "gestureCustomDisplayClassExampleInstance1",
+    invalidate_function = "invalidateCustomDisplayClassExampleInstance1",
+    values = {
+        "/custom_properties/customDisplayProperty"
+    }
 }
 
 front.widgets[#front.widgets + 1] = jbox.custom_display{
-	graphics = {
-		node = "CustomDisplay2"
-	},
-	display_width_pixels = 40,
-	display_height_pixels = 20,
-	draw_function = "drawCustomDisplay2",
-	gesture_function = "gestureCustomDisplay2",
-	invalidate_function = "invalidateCustomDisplay2",
-	values = {
-		"/custom_properties/customDisplayProperty"
-	}
+    graphics = {
+        node = "CustomDisplayClassExampleInstance2"
+    },
+    display_width_pixels = 40,
+    display_height_pixels = 20,
+    draw_function = "drawCustomDisplayClassExampleInstance2",
+    gesture_function = "gestureCustomDisplayClassExampleInstance2",
+    invalidate_function = "invalidateCustomDisplayClassExampleInstance2",
+    values = {
+        "/custom_properties/customDisplayProperty"
+    }
+}
+
+front.widgets[#front.widgets + 1] = jbox.custom_display{
+    graphics = {
+        node = "CustomDisplay2"
+    },
+    display_width_pixels = 40,
+    display_height_pixels = 20,
+    draw_function = "drawCustomDisplay2",
+    gesture_function = "gestureCustomDisplay2",
+    invalidate_function = "invalidateCustomDisplay2",
+    values = {
+        "/custom_properties/customDisplayProperty"
+    }
 }
 
 --------------------------------------------------------------------------
 -- Back
 --------------------------------------------------------------------------
-back = jbox.panel {
-  graphics = {
-    node = "Bg"
-  },
-  widgets = {
-    -- device name / tape
-    jbox.device_name {
-      graphics = {
-        node = "TapeBack",
-      },
+back = jbox.panel{
+    graphics = {
+        node = "Bg"
     },
-
-    -- placeholder
-    jbox.placeholder {
-      graphics = {
-        node = "Placeholder",
-      },
-    },
-
-    -- audio output
-    jbox.audio_output_socket {
-      graphics = {
-        node = "audioOutputStereoPairLeft",
-      },
-      socket = "/audio_outputs/audioOutLeft",
-    },
-    jbox.audio_output_socket {
-      graphics = {
-        node = "audioOutputStereoPairRight",
-      },
-      socket = "/audio_outputs/audioOutRight",
-    },
-
+    widgets = {
+        -- device name / tape
+        jbox.device_name{
+            graphics = {
+                node = "TapeBack",
+            },
+        },
+        
+        -- placeholder
+        jbox.placeholder{
+            graphics = {
+                node = "Placeholder",
+            },
+        },
+        
+        -- audio output
+        jbox.audio_output_socket{
+            graphics = {
+                node = "audioOutputStereoPairLeft",
+            },
+            socket = "/audio_outputs/audioOutLeft",
+        },
+        jbox.audio_output_socket{
+            graphics = {
+                node = "audioOutputStereoPairRight",
+            },
+            socket = "/audio_outputs/audioOutRight",
+        },
+    
     -- audio input
---    jbox.audio_input_socket {
---      graphics = {
---        node = "audioInputStereoPairLeft",
---      },
---      socket = "/audio_inputs/audioInputLeft",
---    },
---    jbox.audio_input_socket {
---      graphics = {
---        node = "audioInputStereoPairRight",
---      },
---      socket = "/audio_inputs/audioInputRight",
---    },
-  }
+    --    jbox.audio_input_socket {
+    --      graphics = {
+    --        node = "audioInputStereoPairLeft",
+    --      },
+    --      socket = "/audio_inputs/audioInputLeft",
+    --    },
+    --    jbox.audio_input_socket {
+    --      graphics = {
+    --        node = "audioInputStereoPairRight",
+    --      },
+    --      socket = "/audio_inputs/audioInputRight",
+    --    },
+    }
 }
 
 --------------------------------------------------------------------------
 -- Folded Front
 --------------------------------------------------------------------------
-folded_front = jbox.panel {
-  graphics = {
-    node = "Bg",
-  },
-  widgets = {
-    -- device name / tape
-    jbox.device_name {
-      graphics = {
-        node = "TapeFoldedFront",
-      },
+folded_front = jbox.panel{
+    graphics = {
+        node = "Bg",
     },
-  }
+    widgets = {
+        -- device name / tape
+        jbox.device_name{
+            graphics = {
+                node = "TapeFoldedFront",
+            },
+        },
+    }
 }
 
 --------------------------------------------------------------------------
 -- Folded Back
 --------------------------------------------------------------------------
-folded_back = jbox.panel {
-  graphics = {
-    node = "Bg",
-  },
-  cable_origin = {
-    node = "CableOrigin",
-  },
-  widgets = {
-    -- device name / tape
-    jbox.device_name {
-      graphics = {
-        node = "TapeFoldedBack",
-      },
+folded_back = jbox.panel{
+    graphics = {
+        node = "Bg",
     },
-  },
+    cable_origin = {
+        node = "CableOrigin",
+    },
+    widgets = {
+        -- device name / tape
+        jbox.device_name{
+            graphics = {
+                node = "TapeFoldedBack",
+            },
+        },
+    },
 }

@@ -31,7 +31,7 @@ front = {
 front[#front + 1] = {
   offset = {40 * 5, 40 * 5},
   {
-    CustomDisplay1 = {
+    CustomDisplayClassExampleInstance1 = {
       {size = {40 * 5, 20 * 5}}
     }
   }
@@ -39,6 +39,15 @@ front[#front + 1] = {
 
 front[#front + 1] = {
   offset = {90 * 5, 40 * 5},
+  {
+    CustomDisplayClassExampleInstance2 = {
+      {size = {40 * 5, 20 * 5}}
+    }
+  }
+}
+
+front[#front + 1] = {
+  offset = {140 * 5, 40 * 5},
   {
     CustomDisplay2 = {
       {size = {40 * 5, 20 * 5}}

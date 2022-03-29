@@ -21,6 +21,7 @@ texts = {
 	["audio out main left"] = "Audio Output Left",
 	["audio out main right"] = "Audio Output Right",
 	["customDisplayProperty"] = "customDisplayProperty",
-	["gesture_ui_name_CustomDisplay1"] = "Gesture UI Name CustomDisplay1",
+	["gesture_ui_name_CustomDisplayClassExampleInstance1"] = "Gesture UI Name CustomDisplayClassExampleInstance1",
+	["gesture_ui_name_CustomDisplayClassExampleInstance2"] = "Gesture UI Name CustomDisplayClassExampleInstance2",
 	["gesture_ui_name_CustomDisplay2"] = "Gesture UI Name CustomDisplay2",
 }

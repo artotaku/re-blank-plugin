@@ -1,10 +1,12 @@
+/** @noSelfInFile */
+
 const customDisplayPropertyIndex = 0;
 const customDisplayName = 'CustomDisplay2';
 
-export const draw: jbox_display.draw = (
+export function draw(
 	property_values: jbox_display.PropertyValue[],
 	display_info: jbox_display.DisplayInfo,
-	dirty_rect: jbox_display.Rectangle) => {
+	dirty_rect: jbox_display.Rectangle): void {
 
 	const propertyValue: jbox_display.PropertyValue = property_values[customDisplayPropertyIndex];
 	jbox.trace(customDisplayName + ':draw: ' + propertyValue);
@@ -19,10 +21,10 @@ export const draw: jbox_display.draw = (
 	jbox_display.draw_text(rect, 'center', '' + propertyValue, 'Small LCD font', { r: 255, g: 255, b: 255 });
 };
 
-export const gesture: jbox_display.recognize_gesture = (
+export function recognizeGesture(
 	property_values: jbox_display.PropertyValue[],
 	display_info: jbox_display.DisplayInfo,
-	gesture_start_point: jbox_display.Point) => {
+	gesture_start_point: jbox_display.Point): jbox_display.GestureDefinition {
 	return {
 		handlers: {
 			on_tap: 'onTap' + customDisplayName,
@@ -33,20 +35,20 @@ export const gesture: jbox_display.recognize_gesture = (
 	};
 };
 
-export const invalidate: jbox_display.invalidate = (
+export function invalidate(
 	property_values: jbox_display.PropertyValue[],
 	last_property_values: jbox_display.PropertyValue[],
-	display_info: jbox_display.DisplayInfo) => {
+	display_info: jbox_display.DisplayInfo): void {
 	if (display_info) {
 		jbox_display.invalidate({ top: 0, left: 0, right: display_info?.width, bottom: display_info?.height });
 	}
 };
 
-export const onTap: jbox_display.on_tap = (
+export function onTap(
 	property_values: jbox_display.PropertyValue[],
 	display_info: jbox_display.DisplayInfo,
 	gesture_info: jbox_display.GestureInfo,
-	custom_data: jbox_display.CustomData) => {
+	custom_data: jbox_display.CustomData): jbox_display.GestureHandlerResult {
 	const propertyValue: jbox_display.PropertyValue = property_values[customDisplayPropertyIndex];
 	jbox.trace(customDisplayName + ':onTap: ' + propertyValue);
 	return {
@@ -58,31 +60,31 @@ export const onTap: jbox_display.on_tap = (
 };
 
 
-export const onUpdate: jbox_display.on_update = (
+export function onUpdate(
 	property_values: jbox_display.PropertyValue[],
 	display_info: jbox_display.DisplayInfo,
 	gesture_info: jbox_display.GestureInfo,
-	custom_data: jbox_display.CustomData) => {
+	custom_data: jbox_display.CustomData): jbox_display.GestureHandlerResult {
 	jbox.trace(customDisplayName + ':onUpdate');
 	return {
 	};
 };
 
-export const onRelease: jbox_display.on_release = (
+export function onRelease(
 	property_values: jbox_display.PropertyValue[],
 	display_info: jbox_display.DisplayInfo,
 	gesture_info: jbox_display.GestureInfo,
-	custom_data: jbox_display.CustomData) => {
+	custom_data: jbox_display.CustomData): jbox_display.GestureHandlerResult {
 	jbox.trace(customDisplayName + ':onRelease');
 	return {
 	};
 };
 
-export const onCancel: jbox_display.on_cancel = (
+export function onCancel(
 	property_values: jbox_display.PropertyValue[],
 	display_info: jbox_display.DisplayInfo,
 	gesture_info: jbox_display.GestureInfo,
-	custom_data: jbox_display.CustomData) => {
+	custom_data: jbox_display.CustomData): jbox_display.GestureHandlerResult {
 	jbox.trace(customDisplayName + ':onCancel');
 	return {
 	};
